@@ -1,4 +1,14 @@
-haxeflixel-stablexui-integration
-================================
+Test of integrating HaxeFlixel and StablexUI
 
-Integration of HaxeFlixel with a sample from StableXUI 
+- https://github.com/Beeblerox/HaxeFlixel
+
+- https://github.com/RealyUniqueName/StablexUI
+
+
+Run using:
+
+- nme test flash
+
+- nme test neko
+
+- nme test cpp
