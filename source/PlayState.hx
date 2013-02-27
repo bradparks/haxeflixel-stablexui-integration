@@ -45,7 +45,7 @@ class PlayState extends FlxState
 	{
 		FlxG.framerate = 50;
 		FlxG.flashFramerate = 50;
-		
+
 		// Creates a new tilemap with no arguments
 		collisionMap = new FlxTilemap();
 		
@@ -135,6 +135,10 @@ class PlayState extends FlxState
 	
 	override public function update():Void
 	{
+    FlxG.mouse.useSystemCursor = true;
+    FlxG.mouse.show();
+    FlxG.mouse.useSystemCursor = true;
+
 		// Tilemaps can be collided just like any other FlxObject, and flixel
 		// automatically collides each individual tile with the object.
 		FlxG.collide(player, collisionMap);
@@ -151,6 +155,7 @@ class PlayState extends FlxState
 		}
 		
 		updatePlayer();
+
 		super.update();
 	}
 	
@@ -187,10 +192,6 @@ class PlayState extends FlxState
 	
 	private function updatePlayer():Void
 	{
-    FlxG.mouse.useSystemCursor = true;
-    FlxG.mouse.show();
-    FlxG.mouse.useSystemCursor = true;
-
     //nme.ui.Mouse.show();
 
 		wrap(player);
